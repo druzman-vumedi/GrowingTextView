@@ -58,7 +58,7 @@
         
 	} else {
 
-		float bottomOffset = (self.contentSize.height - self.frame.size.height + self.contentInset.bottom);
+		CGFloat bottomOffset = (self.contentSize.height - self.frame.size.height + self.contentInset.bottom);
 		if(s.y < bottomOffset && self.scrollEnabled){            
             UIEdgeInsets insets = self.contentInset;
             insets.bottom = 8;
@@ -111,7 +111,8 @@
         }
         else {
             [self.placeholderColor set];
-            [self.placeholder drawInRect:CGRectMake(8.0f, 8.0f, self.frame.size.width - 16.0f, self.frame.size.height - 16.0f) withFont:self.font];
+            [self.placeholder drawInRect:CGRectMake(8.0f, 8.0f, self.frame.size.width - 16.0f, self.frame.size.height - 16.0f)
+                          withAttributes:@{NSFontAttributeName: self.font}];
         }
     }
 }
