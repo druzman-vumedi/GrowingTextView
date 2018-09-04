@@ -28,7 +28,7 @@
 #import "HPGrowingTextView.h"
 #import "HPTextViewInternal.h"
 
-@interface HPGrowingTextView(private)
+@interface HPGrowingTextView()
 -(void)commonInitialiser;
 -(void)resizeTextView:(NSInteger)newSizeH;
 -(void)growDidStop;
